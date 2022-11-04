@@ -5,8 +5,6 @@ function checker() {
     invalid = 0;
     unknow = 0;
 
-  }, false);
-
     input.forEach(token => {
         if(token != "") {
             if (token.length == 30) {
