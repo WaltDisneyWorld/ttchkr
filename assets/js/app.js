@@ -48,7 +48,7 @@ function checker() {
                         valid++;
                         document.getElementById("valid-count").innerHTML = valid;
                         document.getElementById("valid-tokens").innerHTML +=
-                            `<div class="token-checked token-checked-valid"><a style="color: #00BC8C;"> VALID</a> ${token} </div>`
+                            `<div class="token-checked token-checked-valid"><a style="color: #00BC8C;">Valid</a> | ${token}</div>`
     
                     }
                 }
