@@ -4,22 +4,6 @@ function checker() {
     valid = 0;
     invalid = 0;
     unknow = 0;
-    
- var create = document.getElementById('create'),
-    textbox = document.getElementById("valid-count").innerHTML = valid;
-
-  create.addEventListener('click', function () {
-    var link = document.createElement('a');
-    link.setAttribute('download', 'info.txt');
-    link.href = makeTextFile(textbox.value);
-    document.body.appendChild(link);
-
-    // wait for the link to be added to the document
-    window.requestAnimationFrame(function () {
-      var event = new MouseEvent('click');
-      link.dispatchEvent(event);
-      document.body.removeChild(link);
-    });
 
   }, false);
 
@@ -66,7 +50,7 @@ function checker() {
                         valid++;
                         document.getElementById("valid-count").innerHTML = valid;
                         document.getElementById("valid-tokens").innerHTML +=
-                            `<div class="token-checked token-checked-valid"><a style="color: #00BC8C;">Valid</a> | ${token}</div>`
+                            `<div class="token-checked token-checked-valid"><a style="color: #00BC8C;">${token}</div>`
     
                     }
                 }
